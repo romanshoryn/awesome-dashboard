@@ -10,7 +10,7 @@ class StatsPeriodSelector extends Component {
     return (
       <div className={styles.switchPanel}>
         {
-          Object.values(STATS_PERIODS).map((name, idx) =>
+          Object.keys(STATS_PERIODS).map((name, idx) =>
             <StatsPeriodSelectorItem
               name={name}
               selected={name === currentStatsPeriod}

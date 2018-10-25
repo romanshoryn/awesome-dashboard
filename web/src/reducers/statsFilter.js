@@ -8,5 +8,3 @@ export default (state = {}, action) => {
       return state;
   }
 };
-
-export const getPeriod = (state) => state.period;

@@ -3,6 +3,7 @@ import { FETCH_STATS, FETCH_STATS_SUCCESS, FETCH_STATS_FAILURE } from '../consta
 const initalState = {
   fetching: false,
   error: null,
+  data: [{}],
 };
 
 const data = (state = initalState, action) => {
