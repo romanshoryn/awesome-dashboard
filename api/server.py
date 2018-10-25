@@ -9,6 +9,7 @@ class RequestHandler(BaseHTTPRequestHandler):
     self.send_response(status_code)
 
     self.send_header('Content-type','application/json')
+    self.send_header('Access-Control-Allow-Origin', '*')
     self.end_headers()
 
     data = open('./dashboard_data.json', 'r')
