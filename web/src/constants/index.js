@@ -1,3 +1,8 @@
-export const FETCH_STATS = 'FETCH_STATS';
-export const FETCH_STATS_SUCCESS = 'FETCH_STATS_SUCCESS';
-export const FETCH_STATS_FAILURE = 'FETCH_STATS_FAILURE';
+export * from './actionTypes';
+
+export const STATS_PERIODS = {
+  last_3days: 'Last 3 days',
+  yesterday: 'Yesterday',
+  today: 'Today',
+  last_hour: 'Last hour',
+};

@@ -1,4 +1,4 @@
-import { FETCH_STATS, FETCH_STATS_SUCCESS, FETCH_STATS_FAILURE} from '../constants';
+import { FETCH_STATS, FETCH_STATS_SUCCESS, FETCH_STATS_FAILURE } from '../constants';
 
 const initalState = {
   fetching: false,
