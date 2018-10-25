@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import styles from './StatsPeriodPanel.module.scss';
+import styles from './StatsPeriodSelector.module.scss';
 
-class StatsPeriodPanelItem extends Component {
+class StatsPeriodSelectorItem extends Component {
   constructor() {
     super();
 
@@ -9,7 +9,7 @@ class StatsPeriodPanelItem extends Component {
   }
 
   onClick() {
-    this.props.onItemSelect(this.props.name);
+    this.props.selectStatsPeriod(this.props.name);
   }
 
   render() {
@@ -29,4 +29,4 @@ class StatsPeriodPanelItem extends Component {
   }
 }
 
-export default StatsPeriodPanelItem;
+export default StatsPeriodSelectorItem;

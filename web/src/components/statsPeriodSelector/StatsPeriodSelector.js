@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import styles from './StatsPeriodPanel.module.scss';
-import StatsPeriodPanelItem from './StatsPeriodPanelItem';
+import styles from './StatsPeriodSelector.module.scss';
+import StatsPeriodSelectorItem from './StatsPeriodSelectorItem';
 import { STATS_PERIODS } from '../../constants';
 
-class StatsPeriodPanel extends Component {
+class StatsPeriodSelector extends Component {
   render() {
     const { selectStatsPeriod, currentStatsPeriod } = this.props;
 
@@ -11,11 +11,11 @@ class StatsPeriodPanel extends Component {
       <div className={styles.switchPanel}>
         {
           Object.values(STATS_PERIODS).map((name, idx) =>
-            <StatsPeriodPanelItem
+            <StatsPeriodSelectorItem
               name={name}
               selected={name === currentStatsPeriod}
               key={idx}
-              onItemSelect={selectStatsPeriod}
+              selectStatsPeriod={selectStatsPeriod}
             />
           )
         }
@@ -24,4 +24,4 @@ class StatsPeriodPanel extends Component {
   }
 }
 
-export default StatsPeriodPanel;
+export default StatsPeriodSelector;

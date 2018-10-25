@@ -3,7 +3,7 @@ import connect from 'react-redux/lib/connect/connect';
 import * as reducers from '../reducers';
 import * as actions from '../actions';
 import styles from './App.module.scss';
-import StatsPeriodPanel from '../components/statsPeriodPanel/StatsPeriodPanel';
+import StatsPeriodSelector from '../components/statsPeriodSelector/StatsPeriodSelector';
 
 class App extends Component  {
   componentDidMount() {
@@ -19,7 +19,7 @@ class App extends Component  {
     return (
       <div className={styles.app}>
         <div className={styles['app__title']}>Main metrics</div>
-        <StatsPeriodPanel
+        <StatsPeriodSelector
           selectStatsPeriod={selectStatsPeriod}
           currentStatsPeriod={currentStatsPeriod}
         />
