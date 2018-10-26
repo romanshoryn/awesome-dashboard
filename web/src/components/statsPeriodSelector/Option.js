@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './StatsPeriodSelector.module.scss';
 
-class StatsPeriodSelectorItem extends Component {
+class Option extends Component {
   constructor() {
     super();
 
@@ -13,15 +13,15 @@ class StatsPeriodSelectorItem extends Component {
   }
 
   render() {
-    const itemKlasses = [styles.switchPanelItem];
+    const itemKlasses = [styles.statsPeriodSelectorItem];
 
     if (this.props.selected) {
-      itemKlasses.push(styles.switchPanelItem_selected);
+      itemKlasses.push(styles.statsPeriodSelectorItem_selected);
     }
 
     return (
       <div className={itemKlasses.join(' ')} onClick={this.onClick}>
-        <div className={styles.switchPanelItemTitle}>
+        <div className={styles.title}>
           {this.props.name}
         </div>
       </div>
@@ -29,4 +29,4 @@ class StatsPeriodSelectorItem extends Component {
   }
 }
 
-export default StatsPeriodSelectorItem;
+export default Option;

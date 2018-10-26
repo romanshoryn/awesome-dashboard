@@ -1,17 +1,20 @@
-.switchPanel {
-  color: blue;
+.statsPeriodSelector {
   margin-bottom: 3em;
-  
-  .switchPanelItem {
+
+  .statsPeriodSelectorItem {
     $border: 1px solid #D9D9D9;
 
     display: inline-block;
-    width: 10%;
+    width: 12%;
     height: 2.2em;
     background: #FFFFFF;
     border: $border;
     border-right: none;
     cursor: pointer;
+
+    @media only screen and (max-width : 1224px) {
+      width: 20%;
+    }
 
     &:first-of-type {
       border-radius: .4em 0 0 .4em;
@@ -22,18 +25,17 @@
       border-right: $border;
     }
 
-    .switchPanelItemTitle {
+    .title {
       padding-top: .6em;
+      vertical-align: middle;
       font-family: Open Sans;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1em;
+      font-size: .9em;
       text-align: center;
       color: #4A4A4A;
     }
   }
 
-  .switchPanelItem_selected {
+  .statsPeriodSelectorItem_selected {
     $border: 1px solid #2196F3;
 
     background: #2196F3;
@@ -44,7 +46,7 @@
       border-right: $border;
     }
 
-    .switchPanelItemTitle {
+    .title {
       color: #FFFFFF;
     }
   }
