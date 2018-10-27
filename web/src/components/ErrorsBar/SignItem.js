@@ -20,5 +20,3 @@ class SignItem extends Component {
 }
 
 export default SignItem;
-
-

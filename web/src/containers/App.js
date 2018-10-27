@@ -5,6 +5,9 @@ import styles from './App.module.scss';
 import FailureStats from './FailureStats';
 import StatsPeriodSelector from './StatsPeriodSelector';
 import ErrorsBar from './ErrorsBar';
+import Searches from './Searches';
+import Clicks from './Clicks';
+import Bookings from './Bookings';
 
 class App extends Component  {
   componentDidMount() {
@@ -18,6 +21,9 @@ class App extends Component  {
         <StatsPeriodSelector />
         <FailureStats />
         <ErrorsBar />
+        <Searches />
+        <Clicks />
+        <Bookings />
       </div>
     )
   }

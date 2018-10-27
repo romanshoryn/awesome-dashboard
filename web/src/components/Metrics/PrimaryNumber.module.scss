@@ -1,0 +1,24 @@
+.primaryNumber {
+  margin-top: .8em;
+  font-family: Open Sans;
+  font-style: normal;
+  color: #4A4A4A;
+
+  &_inactive {
+    color: #A0B0B9;
+  }
+
+  .number {
+    font-size: 1.4em;
+    margin-right: .4em;
+
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .text {
+    font-size: .8em;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}

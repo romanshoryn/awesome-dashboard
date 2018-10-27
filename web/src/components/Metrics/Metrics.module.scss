@@ -1,0 +1,22 @@
+.metrics {
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+
+  .badge {
+    flex-basis: 10%;
+  }
+
+  .main {
+    flex-basis: 35%;
+  }
+
+  .main, .info {
+    border-bottom: 1px solid #EFF1F4;
+  }
+
+  a {
+    text-decoration: none;
+    color: #2196F3;
+  }
+}
