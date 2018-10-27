@@ -18,10 +18,10 @@ class FailureStats extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const period = reducers.getStatsPeriodKey(state);
+  const periodKey = reducers.getStatsPeriodKey(state);
 
   return {
-    failureStats: reducers.getFailuresByPeriod(state, period),
+    failureStats: reducers.getFailuresByPeriod(state, periodKey),
   };
 }
 

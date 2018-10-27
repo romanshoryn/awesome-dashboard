@@ -38,3 +38,6 @@ export const getMainMetricByPeriod = (state, metric, period) => {
     growth: getGrowthPercentage(current, previous),
   };
 };
+
+export const getMetricByPeriod = (state, metric, period) => 
+  getStatsData(state)[`${metric}_${period}`];
