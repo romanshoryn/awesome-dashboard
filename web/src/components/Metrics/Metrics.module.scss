@@ -12,7 +12,10 @@
 
   .main { flex-basis: 35%; }
 
-  .main, .info { border-bottom: 1px solid $light-gray-color; }
+  .main, .info {
+    padding-bottom: 1em;
+    border-bottom: 1px solid $light-gray-color;
+  }
 
   .info {
     p:first-of-type { color: $secondary-text-color; }
