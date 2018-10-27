@@ -20,9 +20,25 @@ body {
   }
 }
 
-$p-font-sizes: (
-  null  : 15px,
-  480px : 16px,
-  640px : 17px,
-  1024px: 19px
+$regular-font-sizes: (
+  null  : 10px,
+  1024px: 12px
 );
+
+$mid-font-sizes: (
+  null  : 12px,
+  1024px: 14px
+);
+
+$title-font-sizes: (
+  null  : 14px,
+  1024px: 16px
+);
+
+$title-font-weight: 1000;
+
+$negative-color: #FF6A67;
+$positive-color: #8BC34A;
+$secondary-text-color: #A0B0B9;
+$blue-color: #2196F3;
+$light-gray-color: #EFF1F4;

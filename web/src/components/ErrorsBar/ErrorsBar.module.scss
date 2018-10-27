@@ -1,12 +1,12 @@
-.errorsBar {
-  $defaultBackgroundColor: #A0B0B9;
+@import '../../index.scss';
 
+.errorsBar {
   margin-top: .5em;
 
   .chartLine {
     display: inline-block;
     height: .7vw;
-    background-color: $defaultBackgroundColor;
+    background-color: $secondary-text-color;
   }
 
   .signItem {
@@ -14,13 +14,14 @@
     display: inline-block;
     font-size: .9em;
 
-    div { display: inline-block; }
+    span { @include font-size($regular-font-sizes); }
 
     .signMark {
+      display: inline-block;
       width: .8em;
       height: .8em;
       margin-right: .4em;
-      background-color: $defaultBackgroundColor;
+      background-color: $secondary-text-color;
       border-radius: 20%;
     }
   }

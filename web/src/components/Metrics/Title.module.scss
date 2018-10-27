@@ -1,24 +1,25 @@
-.title {
-  $negativeColor: #FF6A67;
-  $positiveColor: #8BC34A;
+@import '../../index.scss';
 
+.title {
   margin-bottom: .4em;
 
   .text {
-    font-weight: 600;
-    font-size: 1.2em;
+    @include font-size($title-font-sizes);
     margin-right: .6em;
+    font-weight: $title-font-weight;
 
-    &_negative { color: $negativeColor; }
+    &_negative { color: $negative-color; }
   }
 
-  .diffBadge {
+  .diffLabel {
+    @include font-size($regular-font-sizes);
+    display: inline-block;
+    vertical-align: text-top;
     padding: .1em .6em;
     border-radius: 1.2em;
-    background-color: $positiveColor;
+    background-color: $positive-color;
     color: white;
-    font-size: .8em;
 
-    &_negative { background-color: $negativeColor; }
+    &_negative { background-color: $negative-color; }
   }
 }

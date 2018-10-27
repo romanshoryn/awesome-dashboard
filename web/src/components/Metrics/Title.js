@@ -5,11 +5,11 @@ export default ({ text, diff }) => {
   const formattedDiff = diff > 0 ? `+ ${diff}%` : `- ${Math.abs(diff)}%`;
   
   const textStyles = [styles.text];
-  const diffStyles = [styles.diffBadge];
+  const diffStyles = [styles.diffLabel];
 
   if (diff < 0) {
     textStyles.push(styles.text_negative);
-    diffStyles.push(styles.diffBadge_negative);
+    diffStyles.push(styles.diffLabel_negative);
   }
 
   return (

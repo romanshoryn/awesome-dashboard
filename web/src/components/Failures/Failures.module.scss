@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .failure {
   display: inline-block;
   width: 33%;
@@ -7,18 +9,14 @@
       display: inline-block;
 
       .title {
-        font-weight: 600;
-        font-size: 1.1em;
+        @include font-size($title-font-sizes);
+        font-weight: $title-font-weight;
       }
 
       .subTitle {
+        @include font-size($regular-font-sizes);
         margin: .3em 0;
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        font-size: .8em;
-        color: #A0B0B9;
+        color: $secondary-text-color;
       }
     }
   }
@@ -30,6 +28,10 @@
     height: .6em;
     width: .6em;
     border-radius: 50%;
-    background-color: #8BC34A;
+    background-color: $positive-color;
+
+    @media only screen and (max-width : 1224px) {
+      display: none;
+    }
   }
 }

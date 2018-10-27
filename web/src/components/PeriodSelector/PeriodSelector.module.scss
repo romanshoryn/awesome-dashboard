@@ -1,12 +1,14 @@
+@import '../../index.scss';
+
 .periodSelector {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 
   .option {
     $border: 1px solid #D9D9D9;
 
     display: inline-block;
     width: 12%;
-    height: 2.2em;
+    height: 1.8em;
     background: #FFFFFF;
     border: $border;
     border-right: none;
@@ -26,8 +28,8 @@
     }
 
     .title {
+      @include font-size($regular-font-sizes);
       padding-top: .6em;
-      font-size: .9em;
       vertical-align: middle;
       text-align: center;
     }
@@ -44,8 +46,6 @@
       border-right: $border;
     }
 
-    .title {
-      color: #FFFFFF;
-    }
+    .title { color: white; }
   }
 }

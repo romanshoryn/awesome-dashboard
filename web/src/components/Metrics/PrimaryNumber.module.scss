@@ -1,10 +1,9 @@
+@import '../../index.scss';
+
 .primaryNumber {
   margin-top: .8em;
-  color: #4A4A4A;
 
-  &_inactive {
-    color: #A0B0B9;
-  }
+  &_inactive { color: $secondary-text-color }
 
   .number {
     font-size: 1.4em;
@@ -14,7 +13,7 @@
   }
 
   .text {
-    font-size: .8em;
+    @include font-size($regular-font-sizes);
     vertical-align: middle;
     display: inline-block;
   }

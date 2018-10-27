@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styles from './ErrorsBar.module.scss';
 import SignItem from './SignItem';
 
 class Sign extends Component {

@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .metrics {
   margin-top: 3em;
   display: flex;
@@ -5,18 +7,22 @@
 
   .badge {
     flex-basis: 10%;
+    @include font-size($regular-font-sizes);
   }
 
-  .main {
-    flex-basis: 35%;
+  .main { flex-basis: 35%; }
+
+  .main, .info { border-bottom: 1px solid $light-gray-color; }
+
+  .info {
+    p:first-of-type { color: $secondary-text-color; }
   }
 
-  .main, .info {
-    border-bottom: 1px solid #EFF1F4;
-  }
+
+  p { @include font-size($regular-font-sizes); }
 
   a {
     text-decoration: none;
-    color: #2196F3;
+    color: $blue-color;
   }
 }

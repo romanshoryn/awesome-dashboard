@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styles from './ErrorsBar.module.scss';
 import Line from './Line';
 
 class Chart extends Component {
