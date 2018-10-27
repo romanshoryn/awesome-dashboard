@@ -10,7 +10,7 @@ import { SearchesBadge } from '../components/Metrics/Badges';
 class Searches extends Component {
   render() {
     return (
-      <Metrics badge={<SearchesBadge />}>
+      <Metrics badge={<SearchesBadge positive={5 > 0} />}>
         <div className={styles.main}>
           <Title text="Searches" diff={5} />
           <PrimaryNumber text="Yesterday" number={29380} />

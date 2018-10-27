@@ -1,10 +1,13 @@
 import React from 'react';
 
-export const SearchesBadge = ({circelColor}) =>
+const NEGATIVE_COLOR = '#FF6A67';
+const POSITIVE_COLOR = '#8BC34A';
+
+export const SearchesBadge = ({positive = true} = {}) =>
   <svg width="48" height="122" viewBox="0 0 48 122" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z" fill="#2196F3"/>
     <path d="M31.8719 16.597C31.6836 16.2287 31.3178 16 30.9156 16H17.0828C16.6814 16 16.3148 16.2287 16.1265 16.597C15.9367 16.969 15.9621 17.4145 16.1919 17.7602L21.7527 26.1453C21.7948 26.209 21.8174 26.2825 21.8174 26.359V32.8757C21.8174 33.496 22.3068 34 22.9083 34C23.1039 34 23.2967 33.9445 23.4676 33.8388L25.653 32.4865C25.9788 32.284 26.181 31.915 26.181 31.5235V26.359C26.181 26.2825 26.2036 26.209 26.2465 26.1445L31.8065 17.761C32.0363 17.4153 32.0618 16.969 31.8719 16.597Z" fill="white"/>
-    <path d="M40 14C43.3137 14 46 11.3137 46 8C46 4.68629 43.3137 2 40 2C36.6863 2 34 4.68629 34 8C34 11.3137 36.6863 14 40 14Z" fill="#8BC34A" stroke="white" stroke-width="2"/>
+    <path d="M40 14C43.3137 14 46 11.3137 46 8C46 4.68629 43.3137 2 40 2C36.6863 2 34 4.68629 34 8C34 11.3137 36.6863 14 40 14Z" fill={positive ? POSITIVE_COLOR : NEGATIVE_COLOR} stroke="white" stroke-width="2"/>
     <path opacity="0.220392" fill-rule="evenodd" clip-rule="evenodd" d="M28.2458 53.1704C27.0191 53.3259 25.7689 53.406 24.5 53.406C22.8287 53.406 21.1899 53.267 19.5945 53L22.8461 116.406H19L23.5 121.406L28 116.406H24.1923L28.2458 53.1704Z" fill="url(#paint0_linear)"/>
     <defs>
     <linearGradient id="paint0_linear" x1="28.2459" y1="121.406" x2="28.2459" y2="53" gradientUnits="userSpaceOnUse">
@@ -14,11 +17,11 @@ export const SearchesBadge = ({circelColor}) =>
     </defs>
   </svg>
 
-export const ClicksBadge = () =>
+export const ClicksBadge = ({positive = true} = {}) =>
   <svg width="48" height="100" viewBox="0 0 48 100" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path opacity="0.220392" fill-rule="evenodd" clip-rule="evenodd" d="M28.2458 31.1704C27.0191 31.3259 25.7689 31.406 24.5 31.406C22.8287 31.406 21.1899 31.267 19.5945 31L22.8461 94.406H19L23.5 99.406L28 94.406H24.1923L28.2458 31.1704Z" fill="url(#paint0_linear)" />
     <path fill-rule="evenodd" clip-rule="evenodd" d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z" fill="#2196F3" />
-    <path d="M40 14C43.3137 14 46 11.3137 46 8C46 4.68629 43.3137 2 40 2C36.6863 2 34 4.68629 34 8C34 11.3137 36.6863 14 40 14Z" fill="#FF6A67" stroke="white" stroke-width="2" />
+    <path d="M40 14C43.3137 14 46 11.3137 46 8C46 4.68629 43.3137 2 40 2C36.6863 2 34 4.68629 34 8C34 11.3137 36.6863 14 40 14Z" fill={positive ? POSITIVE_COLOR : NEGATIVE_COLOR} stroke="white" stroke-width="2" />
     <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="12" y="11" width="24" height="24">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M12 11H36V35H12V11Z" fill="white" />
     </mask>
@@ -33,9 +36,9 @@ export const ClicksBadge = () =>
     </defs>
   </svg>
 
-export const BookingsBadge = () =>
+export const BookingsBadge = ({positive = true} = {}) =>
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z" fill="#2196F3" />
-    <path d="M40 14C43.3137 14 46 11.3137 46 8C46 4.68629 43.3137 2 40 2C36.6863 2 34 4.68629 34 8C34 11.3137 36.6863 14 40 14Z" fill="#8BC34A" stroke="white" stroke-width="2" />
+    <path d="M40 14C43.3137 14 46 11.3137 46 8C46 4.68629 43.3137 2 40 2C36.6863 2 34 4.68629 34 8C34 11.3137 36.6863 14 40 14Z" fill={positive ? POSITIVE_COLOR : NEGATIVE_COLOR} stroke="white" stroke-width="2" />
     <path fill-rule="evenodd" clip-rule="evenodd" d="M13 14V16H15L18.595 23.585L17.245 26.035C17.09 26.325 17 26.65 17 27C17 28.105 17.895 29 19 29H31V27H19.425C19.285 27 19.175 26.89 19.175 26.75C19.175 26.705 19.185 26.665 19.205 26.63L20.1 25H27.55C28.3 25 28.955 24.585 29.3 23.97L32.875 17.48C32.955 17.34 33 17.175 33 17C33 16.445 32.55 16 32 16H17.215L16.265 14H13ZM19 30C17.895 30 17.01 30.895 17.01 32C17.01 33.105 17.895 34 19 34C20.105 34 21 33.105 21 32C21 30.895 20.105 30 19 30ZM27.01 32C27.01 30.895 27.895 30 29 30C30.105 30 31 30.895 31 32C31 33.105 30.105 34 29 34C27.895 34 27.01 33.105 27.01 32Z" fill="white" />
   </svg>
