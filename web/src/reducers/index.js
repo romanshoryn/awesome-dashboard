@@ -27,9 +27,10 @@ export const getFailuresByPeriod = (state, period) => {
 
 export const getMainMetricByPeriod = (state, metric, period) => {
   const data = getStatsData(state);
+  const metricType = metric.toLowerCase();
 
-  const current = data[`${metric}_current_${period}`];
-  const previous = data[`${metric}_previous_${period}`];
+  const current = data[`${metricType}_current_${period}`];
+  const previous = data[`${metricType}_previous_${period}`];
 
   return {
     current,

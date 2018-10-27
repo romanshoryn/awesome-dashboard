@@ -3,20 +3,13 @@ import connect from 'react-redux/lib/connect/connect';
 import * as reducers from '../reducers';
 import styles from '../components/Metrics/Metrics.module.scss';
 import Title from '../components/Metrics/Title';
-import PrimaryNumber from '../components/Metrics/PrimaryNumber';
-import Metrics from '../components/Metrics/Metrics';
-import { ClicksBadge } from '../components/Metrics/Badges';
+import Metrics from './Metrics';
+import { METRIC_TYPES } from '../constants';
 
 class Clicks extends Component {
   render() {
     return (
-      <Metrics badge={<ClicksBadge positive={-13 > 0} />}>
-        <div className={styles.main}>
-          <Title text="Clicks" diff={-13} />
-          <PrimaryNumber text="Yesterday" number={243} />
-          <PrimaryNumber text="Last Friday" number={280} prev={true} />
-        </div>
-
+      <Metrics kind={METRIC_TYPES.clicks}>
         <div className={styles.info}>
           <Title text="CTR: 0,04%" />
           <p>Conversion from searches  to clicks on all devices.</p>

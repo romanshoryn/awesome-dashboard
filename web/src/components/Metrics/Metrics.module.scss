@@ -5,11 +5,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  .badge {
-    flex-basis: 10%;
-    @include font-size($regular-font-sizes);
-  }
-
+  .badge { flex-basis: 10%; }
   .main { flex-basis: 35%; }
 
   .main, .info {
