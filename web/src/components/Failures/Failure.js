@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import accounting from 'accounting';
-import styles from './FailureStats.module.scss';
+import styles from './Failures.module.scss';
 
-class Item extends Component {
+class Failure extends Component {
   render() {
     return (
       <div className={styles.failureStatsItem}>
@@ -20,4 +20,4 @@ class Item extends Component {
   }
 }
 
-export default Item;
+export default Failure;

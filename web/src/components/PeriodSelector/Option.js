@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './StatsPeriodSelector.module.scss';
+import styles from './PeriodSelector.module.scss';
 
 class Option extends Component {
   constructor() {

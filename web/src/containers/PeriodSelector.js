@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import connect from 'react-redux/lib/connect/connect';
-import styles from '../components/StatsPeriodSelector/StatsPeriodSelector.module.scss';
-import Option from '../components/StatsPeriodSelector/Option';
+import styles from '../components/PeriodSelector/PeriodSelector.module.scss';
+import Option from '../components/PeriodSelector/Option';
 import * as reducers from '../reducers';
 import * as actions from '../actions';
 import { STATS_PERIODS } from '../constants';

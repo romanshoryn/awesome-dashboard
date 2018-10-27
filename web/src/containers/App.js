@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import connect from 'react-redux/lib/connect/connect';
 import * as actions from '../actions';
 import styles from './App.module.scss';
-import FailureStats from './FailureStats';
-import StatsPeriodSelector from './StatsPeriodSelector';
+import Failures from './Failures';
+import PeriodSelector from './PeriodSelector';
 import ErrorsBar from './ErrorsBar';
 import Searches from './Searches';
 import Clicks from './Clicks';
@@ -18,8 +18,8 @@ class App extends Component  {
     return (
       <div className={styles.app}>
         <div className={styles['app__title']}>Main metrics</div>
-        <StatsPeriodSelector />
-        <FailureStats />
+        <PeriodSelector />
+        <Failures />
         <ErrorsBar />
         <Searches />
         <Clicks />

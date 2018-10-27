@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import connect from 'react-redux/lib/connect/connect';
 import * as reducers from '../reducers';
-import Item from '../components/FailureStats/Item';
+import Failure from '../components/Failures/Failure';
 
 class FailureStats extends Component {
   render() {
@@ -9,9 +9,9 @@ class FailureStats extends Component {
 
     return (
       <div>
-        <Item name='Errors' percentage={failureStats.errors} />
-        <Item name='Zeroes' percentage={failureStats.zeroes} />
-        <Item name='Timeouts' percentage={failureStats.timeout} />
+        <Failure name='Errors' percentage={failureStats.errors} />
+        <Failure name='Zeroes' percentage={failureStats.zeroes} />
+        <Failure name='Timeouts' percentage={failureStats.timeout} />
       </div>
     )
   }
