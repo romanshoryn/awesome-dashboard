@@ -37,6 +37,7 @@ const mapStateToProps = (state) => {
   const period = reducers.getStatsPeriodKey(state);
 
   return {
+    mainMetrics: reducers.getMainMetricByPeriod(state, 'bookings', period),
   };
 }
 

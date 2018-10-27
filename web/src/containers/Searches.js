@@ -9,12 +9,15 @@ import { SearchesBadge } from '../components/Metrics/Badges';
 
 class Searches extends Component {
   render() {
+    const { mainMetrics } = this.props;
+    const { current, previous, growth } = mainMetrics;
+
     return (
-      <Metrics badge={<SearchesBadge positive={5 > 0} />}>
+      <Metrics badge={<SearchesBadge positive={growth > 0} />}>
         <div className={styles.main}>
-          <Title text="Searches" diff={5} />
-          <PrimaryNumber text="Yesterday" number={29380} />
-          <PrimaryNumber text="Last Friday" number={27985} prev={true} />
+          <Title text="Searches" growth={growth} />
+          <PrimaryNumber text="Yesterday" number={current} />
+          <PrimaryNumber text="Last Friday" number={previous} prev={true} />
         </div>
 
         <div className={styles.info}>
@@ -34,6 +37,7 @@ const mapStateToProps = (state) => {
   const period = reducers.getStatsPeriodKey(state);
 
   return {
+    mainMetrics: reducers.getMainMetricByPeriod(state, 'searches', period),
   };
 }
 

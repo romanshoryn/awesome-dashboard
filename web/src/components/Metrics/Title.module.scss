@@ -11,7 +11,7 @@
     &_negative { color: $negative-color; }
   }
 
-  .diffLabel {
+  .growthLabel {
     @include font-size($regular-font-sizes);
     display: inline-block;
     vertical-align: text-top;

@@ -1,4 +1,5 @@
 import React from 'react';
+import accounting from 'accounting';
 import styles from './PrimaryNumber.module.scss';
 
 export default ({ number, text, prev }) => {
@@ -8,7 +9,7 @@ export default ({ number, text, prev }) => {
 
   return (
     <div className={primaryNumberStyles.join(' ')}>
-      <span className={styles.number}>{number}</span>
+      <span className={styles.number}>{accounting.formatNumber(number, 0, ' ')}</span>
       <span className={styles.text}>{text}</span>
     </div>
   );
