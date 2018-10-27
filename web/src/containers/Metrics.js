@@ -5,12 +5,14 @@ import Title from '../components/Metrics/Title';
 import PrimaryNumber from '../components/Metrics/PrimaryNumber';
 import styles from '../components/Metrics/Metrics.module.scss';
 import * as Badges from '../components/Metrics/Badges.js';
+import { getPreviousPeriod } from '../utils';
 
 class Metrics extends Component {
   render() {
-    const { mainMetrics, kind } = this.props;
+    const { mainMetrics, kind, period } = this.props;
     const { current, previous, growth } = mainMetrics;
     const Badge = Badges[kind];
+    const prevPeriod = getPreviousPeriod(period);
 
     return (
       <div className={styles.metrics}>
@@ -19,8 +21,8 @@ class Metrics extends Component {
         </div>
         <div className={styles.main}>
           <Title text={kind} growth={growth} />
-          <PrimaryNumber text="Yesterday" number={current} />
-          <PrimaryNumber text="Last Friday" number={previous} prev={true} />
+          <PrimaryNumber text={period} number={current} />
+          <PrimaryNumber text={prevPeriod} number={previous} prev={true} />
         </div>
 
         <div className={styles.info}>
@@ -33,10 +35,12 @@ class Metrics extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   const kind = ownProps.kind;
-  const period = reducers.getStatsPeriodKey(state);
+  const period = reducers.getStatsPeriod(state);
+  const periodKey = reducers.getStatsPeriodKey(state);
 
   return {
-    mainMetrics: reducers.getMainMetricByPeriod(state, kind, period),
+    period,
+    mainMetrics: reducers.getMainMetricByPeriod(state, kind, periodKey),
   };
 }
 

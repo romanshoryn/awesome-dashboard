@@ -1,10 +1,15 @@
 export * from './actionTypes';
 
+export const LAST_HOUR = 'Last hour';
+export const TODAY = 'Today';
+export const YESTERDAY = 'Yesterday'
+export const LAST_3_DAYS = 'Last 3 days';
+
 export const STATS_PERIODS = {
-  'Last hour': 'last_hour',
-  'Today': 'today',
-  'Yesterday': 'yesterday',
-  'Last 3 days': 'last_3days',
+  [LAST_HOUR]: 'last_hour',
+  [TODAY]: 'today',
+  [YESTERDAY]: 'yesterday',
+  [LAST_3_DAYS]: 'last_3days',
 };
 
 export const METRIC_TYPES = {
@@ -14,4 +19,3 @@ export const METRIC_TYPES = {
 }
 
 export const DEFAULT_STATS_PERIOD = Object.keys(STATS_PERIODS)[0];
-export const SEARCH_METRIC_TYPE = 'search';
