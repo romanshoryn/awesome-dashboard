@@ -13,10 +13,10 @@ class Option extends Component {
   }
 
   render() {
-    const itemKlasses = [styles.statsPeriodSelectorItem];
+    const itemKlasses = [styles.option];
 
     if (this.props.selected) {
-      itemKlasses.push(styles.statsPeriodSelectorItem_selected);
+      itemKlasses.push(styles.option_selected);
     }
 
     return (

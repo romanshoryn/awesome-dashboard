@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 import App from './containers/App';
 import sagas from './sagas';
 import reducers from './reducers';
+import './index.scss';
 
 const sagaMiddleware = createSagaMiddleware();
 

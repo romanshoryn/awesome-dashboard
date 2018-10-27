@@ -8,7 +8,7 @@ class Chart extends Component {
     const totalCount = errorStats.reduce((res, error) => res + error.count, 0);
 
     return (
-      <div className={styles.chart}>
+      <div>
         {
           errorStats.map((error, idx) =>
             <Line key={idx} totalCount={totalCount} code={error.code} count={error.count} />

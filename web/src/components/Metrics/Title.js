@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Title.module.scss';
 
-export default ({ text, diff, prev }) => {
+export default ({ text, diff }) => {
   const formattedDiff = diff > 0 ? `+ ${diff}%` : `- ${Math.abs(diff)}%`;
   
   const textStyles = [styles.text];

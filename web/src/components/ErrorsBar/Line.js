@@ -10,8 +10,7 @@ class Line extends Component {
     const width = numberToPercentageRatio(count, totalCount);
 
     return (
-      <div className={styles.line} style={{backgroundColor, width}}>
-      </div>
+      <div className={styles.chartLine} style={{backgroundColor, width}}></div>
     );
   }
 }

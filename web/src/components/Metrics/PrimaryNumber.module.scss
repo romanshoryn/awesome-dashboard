@@ -1,7 +1,5 @@
 .primaryNumber {
   margin-top: .8em;
-  font-family: Open Sans;
-  font-style: normal;
   color: #4A4A4A;
 
   &_inactive {
@@ -11,7 +9,6 @@
   .number {
     font-size: 1.4em;
     margin-right: .4em;
-
     vertical-align: middle;
     display: inline-block;
   }

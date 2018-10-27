@@ -3,13 +3,10 @@
   $positiveColor: #8BC34A;
 
   margin-bottom: .4em;
-  font-family: Open Sans;
-  font-style: normal;
 
   .text {
     font-weight: 600;
     font-size: 1.2em;
-    color: #4A4A4A;
     margin-right: .6em;
 
     &_negative { color: $negativeColor; }

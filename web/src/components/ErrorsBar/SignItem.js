@@ -11,7 +11,7 @@ class SignItem extends Component {
     return (
       <div className={styles.signItem} style={{width}}>
         <div className={styles.signMark} style={{backgroundColor}}></div>
-        <div className={styles.signItemText}>
+        <div>
           {code ? `Error ${code}` : 'Other'}: {accounting.formatNumber(count, 0, ' ')}
         </div>
       </div>

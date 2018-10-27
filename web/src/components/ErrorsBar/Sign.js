@@ -8,13 +8,13 @@ class Sign extends Component {
     const width = `${100 / errorStats.length}%`;
 
     return (
-      <div className={styles.sign}>
+      <React.Fragment>
         {
           errorStats.map((error, idx) =>
             <SignItem key={idx} code={error.code} count={error.count} width={width} />
           )
         }
-      </div>
+      </React.Fragment>
     );
   }
 }

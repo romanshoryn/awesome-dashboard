@@ -5,7 +5,7 @@ import styles from './Failures.module.scss';
 class Failure extends Component {
   render() {
     return (
-      <div className={styles.failureStatsItem}>
+      <div className={styles.failure}>
         <div className={styles.content}>
           <div className={styles.circle}></div>
           <div className={styles.text}>

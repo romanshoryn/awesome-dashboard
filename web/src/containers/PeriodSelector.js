@@ -11,7 +11,7 @@ class StatsPeriodSelector extends Component {
     const { selectStatsPeriod, currentStatsPeriod } = this.props;
 
     return (
-      <div className={styles.statsPeriodSelector}>
+      <div className={styles.periodSelector}>
         {
           Object.keys(STATS_PERIODS).map((name, idx) =>
             <Option

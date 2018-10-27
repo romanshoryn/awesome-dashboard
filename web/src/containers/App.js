@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import connect from 'react-redux/lib/connect/connect';
 import * as actions from '../actions';
-import styles from './App.module.scss';
 import Failures from './Failures';
 import PeriodSelector from './PeriodSelector';
 import ErrorsBar from './ErrorsBar';
@@ -16,20 +15,20 @@ class App extends Component  {
 
   render() {
     return (
-      <div className={styles.app}>
-        <div className={styles['app__title']}>Main metrics</div>
+      <React.Fragment>
+        <h2>Main metrics</h2>
         <PeriodSelector />
         <Failures />
         <ErrorsBar />
         <Searches />
         <Clicks />
         <Bookings />
-      </div>
+      </React.Fragment>
     )
   }
 }
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch) => ({
   fetchData: () => dispatch(actions.fetchStats()),

@@ -3,37 +3,25 @@
 
   margin-top: .5em;
 
-  .chart {
-    .line {
-      display: inline-block;
-      height: .7vw;
-      background-color: $defaultBackgroundColor;
-    }
+  .chartLine {
+    display: inline-block;
+    height: .7vw;
+    background-color: $defaultBackgroundColor;
   }
 
-  .sign {
+  .signItem {
     margin-top: 1.2em;
+    display: inline-block;
+    font-size: .9em;
 
-    .signItem {
-      display: inline-block;
-      font-size: .9em;
+    div { display: inline-block; }
 
-      .signMark {
-        display: inline-block;
-        width: .8em;
-        height: .8em;
-        margin-right: .4em;
-        background-color: $defaultBackgroundColor;
-        border-radius: 20%;
-      }
-
-      .signItemText {
-        display: inline-block;
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-      }
+    .signMark {
+      width: .8em;
+      height: .8em;
+      margin-right: .4em;
+      background-color: $defaultBackgroundColor;
+      border-radius: 20%;
     }
   }
 }
