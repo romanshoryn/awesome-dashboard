@@ -46,7 +46,7 @@ export const getPreviousPeriod = (period) => {
 };
 
 export const formatNumber = (number, ...args) => {
-  if (number === null || number === undefined) {
+  if (number === undefined) {
     return MISSING_DATA_SIGN;
   }
 

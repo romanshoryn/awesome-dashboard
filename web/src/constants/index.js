@@ -18,6 +18,6 @@ export const METRIC_TYPES = {
   clicks: 'Clicks',
 }
 
-export const DEFAULT_STATS_PERIOD = Object.keys(STATS_PERIODS)[0];
+export const DEFAULT_STATS_PERIOD = Object.keys(STATS_PERIODS)[2];
 
 export const MISSING_DATA_SIGN = 'N/A';
