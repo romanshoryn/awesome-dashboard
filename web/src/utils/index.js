@@ -50,11 +50,18 @@ export const formatNumber = (number, ...args) => {
     return MISSING_DATA_SIGN;
   }
 
-  return accounting.formatNumber(number, ...args);
+  return (
+    args.length ?
+      accounting.formatNumber(number, ...args) :
+      accounting.formatNumber(number, 0, ' ')
+  );
 };
 
 export const formatPercentage = (number, ...args) => {
-  const formatted = formatNumber(number, ...args);
+  const formatted =
+    args.length ?
+      formatNumber(number, ...args) :
+      formatNumber(number, 2, null, ',');
 
   return (formatted === MISSING_DATA_SIGN) ? formatted : `${formatted}%`; 
 };

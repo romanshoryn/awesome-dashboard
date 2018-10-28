@@ -41,3 +41,12 @@ export const getMainMetricByPeriod = (state, metric, period) => {
 
 export const getMetricByPeriod = (state, metric, period) => 
   getStatsData(state)[`${metric}_${period}`];
+
+export const getTrafficMetrics = (state) => {
+  const data = getStatsData(state);
+
+  return {
+    mobile: data['mobile_pessimizer'],
+    web: data['web_pessimizer'],
+  }
+};

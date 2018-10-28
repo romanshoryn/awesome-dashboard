@@ -10,8 +10,8 @@ class Bookings extends Component {
   render() {
     return (
       <Metrics kind={METRIC_TYPES.bookings}>
-        <Title text={`STR: ${formatPercentage(this.props.str, 2, null, ',')}`} />
-        <Title text={`Avg. Check: ${formatNumber(this.props.avg, 0, ' ')}`} />
+        <Title text={`STR: ${formatPercentage(this.props.str)}`} />
+        <Title text={`Avg. Check: ${formatNumber(this.props.avg)}`} />
         <p>Conversion from cliks  to bookings on all devices.</p>
         <p>
           Help:&nbsp;

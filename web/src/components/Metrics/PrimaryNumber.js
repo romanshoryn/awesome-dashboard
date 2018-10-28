@@ -9,7 +9,7 @@ export default ({ number, text, prev }) => {
 
   return (
     <div className={primaryNumberStyles.join(' ')}>
-      <span className={styles.number}>{formatNumber(number, 0, ' ')}</span>
+      <span className={styles.number}>{formatNumber(number)}</span>
       <span className={styles.text}>{text}</span>
     </div>
   );

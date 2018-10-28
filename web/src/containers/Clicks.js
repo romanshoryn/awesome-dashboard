@@ -4,14 +4,14 @@ import * as reducers from '../reducers';
 import Title from '../components/Metrics/Title';
 import Metrics from './Metrics';
 import { METRIC_TYPES } from '../constants';
-import { formatNumber, formatPercentage } from '../utils';
+import { formatPercentage } from '../utils';
 
 class Clicks extends Component {
   render() {
     return (
       <Metrics kind={METRIC_TYPES.clicks}>
-        <Title text={`CTR: ${formatPercentage(this.props.ctr, 2, null, ',')}`} />
-        <p>Conversion from searches  to clicks on all devices.</p>
+        <Title text={`CTR: ${formatPercentage(this.props.ctr)}`} />
+        <p>Conversion from searches to clicks on all devices.</p>
         <p>
           Help: <a href="#ctr">CTR</a>, <a href="#clicks">Clicks</a>
         </p>

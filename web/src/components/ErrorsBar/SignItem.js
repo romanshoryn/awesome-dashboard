@@ -11,7 +11,7 @@ class SignItem extends Component {
       <div className={styles.signItem} style={{width}}>
         <div className={styles.signMark} style={{backgroundColor}}></div>
         <span>
-          {code ? `Error ${code}` : 'Other'}: {formatNumber(count, 0, ' ')}
+          {code ? `Error ${code}` : 'Other'}: {formatNumber(count)}
         </span>
       </div>
     );
