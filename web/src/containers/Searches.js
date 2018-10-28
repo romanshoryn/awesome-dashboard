@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import connect from 'react-redux/lib/connect/connect';
-import accounting from 'accounting';
 import * as reducers from '../reducers';
 import Metrics from './Metrics';
 import Title from '../components/Metrics/Title';

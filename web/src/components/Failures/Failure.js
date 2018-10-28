@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import accounting from 'accounting';
 import styles from './Failures.module.scss';
+import { formatPercentage } from '../../utils';
 
 class Failure extends Component {
   render() {
@@ -10,7 +10,7 @@ class Failure extends Component {
           <div className={styles.circle}></div>
           <div className={styles.text}>
             <div className={styles.title}>
-              {this.props.name}: {accounting.formatNumber(this.props.percentage, 2, ',')}%
+              {this.props.name}: {formatPercentage(this.props.percentage, 2, null, ', ')}
             </div>
             <div className={styles.subTitle}>Average: 0.11%</div>
           </div>

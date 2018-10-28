@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import accounting from 'accounting';
 import styles from './ErrorsBar.module.scss';
-import { numberToHexColor } from '../../utils';
+import { numberToHexColor, formatNumber } from '../../utils';
 
 class SignItem extends Component {
   render() {
@@ -12,7 +11,7 @@ class SignItem extends Component {
       <div className={styles.signItem} style={{width}}>
         <div className={styles.signMark} style={{backgroundColor}}></div>
         <span>
-          {code ? `Error ${code}` : 'Other'}: {accounting.formatNumber(count, 0, ' ')}
+          {code ? `Error ${code}` : 'Other'}: {formatNumber(count, 0, ' ')}
         </span>
       </div>
     );

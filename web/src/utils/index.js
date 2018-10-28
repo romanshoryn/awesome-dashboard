@@ -1,5 +1,12 @@
 import moment from 'moment';
-import { LAST_HOUR, TODAY, YESTERDAY, LAST_3_DAYS } from '../constants';
+import accounting from 'accounting';
+import {
+  LAST_HOUR,
+  TODAY,
+  YESTERDAY,
+  LAST_3_DAYS,
+  MISSING_DATA_SIGN
+} from '../constants';
 
 export const numberToHexColor = (number) => {
   if (!number) return null;
@@ -36,4 +43,18 @@ export const getPreviousPeriod = (period) => {
   }
 
   return timestamp;
+};
+
+export const formatNumber = (number, ...args) => {
+  if (number === null || number === undefined) {
+    return MISSING_DATA_SIGN;
+  }
+
+  return accounting.formatNumber(number, ...args);
+};
+
+export const formatPercentage = (number, ...args) => {
+  const formatted = formatNumber(number, ...args);
+
+  return (formatted === MISSING_DATA_SIGN) ? formatted : `${formatted}%`; 
 };

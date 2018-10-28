@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import connect from 'react-redux/lib/connect/connect';
-import accounting from 'accounting';
 import * as reducers from '../reducers';
 import Title from '../components/Metrics/Title';
 import Metrics from './Metrics';
 import { METRIC_TYPES } from '../constants';
+import { formatNumber, formatPercentage } from '../utils';
 
 class Clicks extends Component {
   render() {
-    const { ctr } = this.props;
-    const formattedCtr = accounting.formatNumber(ctr, 2);
-
     return (
       <Metrics kind={METRIC_TYPES.clicks}>
-        <Title text={`CTR: ${formattedCtr}%`} />
+        <Title text={`CTR: ${formatPercentage(this.props.ctr, 2, null, ',')}`} />
         <p>Conversion from searches  to clicks on all devices.</p>
         <p>
           Help: <a href="#ctr">CTR</a>, <a href="#clicks">Clicks</a>
