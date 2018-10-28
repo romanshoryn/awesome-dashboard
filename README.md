@@ -11,7 +11,7 @@ After that type `yarn start` to start the application.
 Go to `./api` folder and run `python3 server.py` command to start the app.
 
 
-#### Notes
+## Notes
 
 - Я так и не разобрался, как правильно вычислить Average значение процента различных ошибок, поэтому я бы вовсе не отображал эту информацию до тех пор, пока бы это не выяснил.
 
