@@ -15,8 +15,10 @@ export const numberToHexColor = (number) => {
   return `#${hex}`;
 };
 
-export const numberToPercentageRatio = (number, total) =>
-  `${(number * 100) / total}%`;
+export const numberToPercentageRatio = (number, total) => {
+  const val = ((number * 100) / total).toFixed(2);
+  return `${val}%`;
+}
 
 export const getGrowthPercentage = (number1, number2) =>
   Math.round((number1 - number2) / number2 * 100);

@@ -5,8 +5,13 @@
 
   .chartLine {
     display: inline-block;
-    height: .5vw;
+    height: .6em;
     background-color: $secondary-text-color;
+    background-clip: content-box;
+    outline: .1em solid white;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
   }
 
   .signItem {
